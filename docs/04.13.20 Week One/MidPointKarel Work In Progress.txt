@@ -1,0 +1,51 @@
+# Picks up beepers on alternate sides of a mid point
+def pick_around_midpoint():
+    """
+    pre:
+    post:
+    """
+    if beepers_present():
+        pick_beeper()
+        move_to_wall()
+
+def one_rep():
+    """
+    Tells Karel to pick up the first beeper she encounters and move to the
+    opposite side
+    pre:
+    post:
+    """
+    if no_beepers_present():
+        turn_around()
+        move_when_no_beepers()
+        pick_around_midpoint()
+
+def last_rep():
+    """
+    Tells Karel to pick up the first beeper she encounters and move to the
+    opposite side
+    pre:
+    post:
+    """
+    if front_is_clear():
+        move_when_no_beepers()
+        pick_around_midpoint()
+
+"""
+# Moves Karel around a midpoint
+def move_around_midpoint():
+    
+    pre:
+    post:
+    
+    while no_beepers_present():
+        turn_around()
+        move_when_no_beepers()
+    pick_around_midpoint()
+"""
+
+    while front_is_clear():
+        if no_beepers_present():
+            move()
+        else:
+            move_to_wall()

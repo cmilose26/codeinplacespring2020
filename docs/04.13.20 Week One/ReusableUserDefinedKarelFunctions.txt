@@ -1,0 +1,34 @@
+# Checks if Karel's back is blocked
+def back_is_blocked():
+    turn_around()
+    front_is_blocked()
+
+# Turns Karel right using three turn lefts
+def turn_right():
+    for i in range (3):
+        turn_left()
+
+# Turns Karel around by 180 degrees
+def turn_around():
+    for i in range (2):
+        turn_left()
+
+# Turns Karel left as many times as needed to face north
+def face_north():
+   while not_facing_north():
+       turn_left()
+
+# Turns Karel left as many times as needed to face south
+def face_south():
+   while not_facing_south():
+       turn_left()
+
+# Turns Karel left as many times as needed to face east
+def face_east():
+   while not_facing_east():
+       turn_left()
+
+# Turns Karel left as many times as needed to face east
+def face_west():
+   while not_facing_west():
+       turn_left()
